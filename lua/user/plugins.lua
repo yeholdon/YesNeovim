@@ -48,6 +48,7 @@ return packer.startup(function(use)
   use { "kyazdani42/nvim-web-devicons", commit = "563f3635c2d8a7be7933b9e547f7c178ba0d4352" }
   use { "kyazdani42/nvim-tree.lua", commit = "7282f7de8aedf861fe0162a559fc2b214383c51c" }
   use { "akinsho/bufferline.nvim", commit = "83bf4dc7bff642e145c8b4547aa596803a8b4dc4" }
+  use { "arnamak/stay-centered.nvim", commit = "68ef23c4dd7f515140bf20650845e2211a7c64ea"}
   -- use { 'simrat39/symbols-outline.nvim' }
     use { "stevearc/aerial.nvim", commit = "50d28ad4e3e1ff89b5fc1bff985760c19c2fa782"}
 	use { "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" }
@@ -82,6 +83,7 @@ return packer.startup(function(use)
 	use { "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" } -- for formatters and linters
   use { "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" }
     use {"j-hui/fidget.nvim"}
+    use { "lukas-reineke/lsp-format.nvim", commit = "ca0df5c8544e51517209ea7b86ecc522c98d4f0a"}
 
 	-- Telescope
 	use { "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" }
@@ -101,6 +103,8 @@ return packer.startup(function(use)
 
     -- test & debug
     use { 'michaelb/sniprun', run = 'bash ./install.sh'}
+
+    use { 'ethanholz/nvim-lastplace', commit = "ecced899435c6bcdd81becb5efc6d5751d0dc4c8" }
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
