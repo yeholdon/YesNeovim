@@ -116,7 +116,8 @@ return packer.startup(function(use)
   --
 	-- Git
 	use { "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" }
-
+    use 'sindrets/diffview.nvim'
+    
     -- CMake
     use { "Shatur/neovim-cmake" }
     --use { "Civitasv/cmake-tools.nvim", commit = "d17436572b14e21962c36165d87ecca4442a8c5b"}
