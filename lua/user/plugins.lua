@@ -50,7 +50,9 @@ return packer.startup(function(use)
   use { "akinsho/bufferline.nvim", commit = "83bf4dc7bff642e145c8b4547aa596803a8b4dc4" }
   use { "arnamak/stay-centered.nvim", commit = "68ef23c4dd7f515140bf20650845e2211a7c64ea"}
   -- use { 'simrat39/symbols-outline.nvim' }
-    use { "stevearc/aerial.nvim", commit = "50d28ad4e3e1ff89b5fc1bff985760c19c2fa782"}
+    use { "stevearc/aerial.nvim"
+        -- , commit = "50d28ad4e3e1ff89b5fc1bff985760c19c2fa782"
+    }
 	use { "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" }
   use { "nvim-lualine/lualine.nvim", commit = "a52f078026b27694d2290e34efa61a6e4a690621" }
   use { "akinsho/toggleterm.nvim", commit = "2a787c426ef00cb3488c11b14f5dcf892bbd0bda" }
