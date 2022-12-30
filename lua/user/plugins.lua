@@ -51,7 +51,6 @@ return packer.startup(function(use)
   use { "arnamak/stay-centered.nvim", commit = "68ef23c4dd7f515140bf20650845e2211a7c64ea"}
   -- use { 'simrat39/symbols-outline.nvim' }
     use { "stevearc/aerial.nvim"
-        -- , commit = "50d28ad4e3e1ff89b5fc1bff985760c19c2fa782"
     }
 	use { "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" }
   use { "nvim-lualine/lualine.nvim", commit = "a52f078026b27694d2290e34efa61a6e4a690621" }
@@ -90,13 +89,15 @@ return packer.startup(function(use)
 	-- Telescope
 	use { "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" }
 
+    use { "phaazon/hop.nvim" } -- like easymotion, but more powerful
 	-- Treesitter
 	use {
 		"nvim-treesitter/nvim-treesitter",
 		commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
 	}
 
-
+    -- session
+  use "Shatur/neovim-session-manager"
 
   -- Debugger
   use "ravenxrz/DAPInstall.nvim" -- help us install several debuggers
@@ -124,6 +125,11 @@ return packer.startup(function(use)
 
     -- test & debug
     use { 'michaelb/sniprun', run = 'bash ./install.sh'}
+
+    -- auto save and autoread
+
+    use "Pocco81/AutoSave.nvim"
+    use "djoshea/vim-autoread"
 
     use { 'ethanholz/nvim-lastplace', commit = "ecced899435c6bcdd81becb5efc6d5751d0dc4c8" }
 	-- Automatically set up your configuration after cloning packer.nvim

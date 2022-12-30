@@ -1,16 +1,5 @@
-
-local status_ok, symbols_outline= pcall(require, "symbols-outline")
-if not status_ok then
-  return
-end
-
--- local config_status_ok, nvim_tree_config = pcall(require, "symbols-outline.config")
--- if not config_status_ok then
---   return
--- end
-
-
-symbols_outline.setup {
+-- https://github.com/simrat39/symbols-outline.nvim
+vim.g.symbols_outline = {
     highlight_hovered_item = true,
     show_guides = true,
     auto_preview = false,
@@ -60,5 +49,5 @@ symbols_outline.setup {
         Event = {icon = "🗲", hl = "TSType"},
         Operator = {icon = "+", hl = "TSOperator"},
         TypeParameter = {icon = "𝙏", hl = "TSParameter"}
-    } 
+    }
 }
