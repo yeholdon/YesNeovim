@@ -105,6 +105,45 @@ local mappings = {
     u = { "<cmd>PackerUpdate<cr>", "Update" },
   },
 
+  C = {
+    name = "CMake",
+    g = {"<cmd>CMake configure<CR>", "Configure"},
+    t = {"<cmd>CMake select_target<CR>", "SelectTarget"},
+    T = {"<cmd>CMake select_build_type<CR>", "SelectBuildType"},
+    b = {"<cmd>CMake build<CR>", "BuildTarget"},
+    a = {"<cmd>CMake build_all<CR>", "BuildAll"},
+    r = {"<cmd>CMake build_and_run<CR>", "Run"},
+    d = {"<cmd>CMake build_and_debug<CR>", "DebugTarget"},
+    c = {"<cmd>CMake cancel<CR>", "Cancel"},
+    C = {"<cmd>CMake create_project<CR>", "New Project"},
+    s = {"<cmd>CMake set_target_args<CR>", "SetArg"},
+  },
+
+  d = {
+    name = "Debug",
+    R = { "<cmd>lua require'dap'.run_to_cursor()<cr>", "Run to Cursor" },
+    E = { "<cmd>lua require'dapui'.eval(vim.fn.input '[Expression] > ')<cr>", "Evaluate Input" },
+    X = { "<cmd>lua require'dap'.terminate()<cr>", "Terminate" },
+    -- C = { "<cmd>lua require'dap'.set_breakpoint(vim.fn.input '[Condition] > ')<cr>", "Conditional Breakpoint" },
+    T = { "<cmd>lua require'dapui'.toggle('sidebar')<cr>", "Toggle Sidebar" },
+    p = { "<cmd>lua require'dap'.pause()<cr>", "Pause" },
+    r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Toggle Repl" },
+    q = { "<cmd>lua require'dap'.close()<cr>", "Quit" },
+
+    -- b = { "<cmd>lua require'dap'.step_back()<cr>", "Step Back" },
+    -- c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
+    -- d = { "<cmd>lua require'dap'.disconnect()<cr>", "Disconnect" },
+    -- e = { "<cmd>lua require'dapui'.eval()<cr>", "Evaluate" },
+    -- g = { "<cmd>lua require'dap'.session()<cr>", "Get Session" },
+    -- h = { "<cmd>lua require'dap.ui.widgets'.hover()<cr>", "Hover Variables" },
+    -- S = { "<cmd>lua require'dap.ui.widgets'.scopes()<cr>", "Scopes" },
+    -- i = { "<cmd>lua require'dap'.step_into()<cr>", "Step Into" },
+    -- o = { "<cmd>lua require'dap'.step_over()<cr>", "Step Over" },
+    -- t = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
+    -- u = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" },
+  },
+
+
   g = {
     name = "Git",
     g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
