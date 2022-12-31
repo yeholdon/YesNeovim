@@ -143,6 +143,17 @@ local mappings = {
     -- u = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" },
   },
 
+  T = {
+    name = "Trouble",
+    t = { "<cmd>Trouble<cr>", "ToggleTrouble" },
+    d = { "<cmd>Trouble document_diagnostics<cr>", "Document Diagnostics"},
+    w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics"},
+    q = { "<cmd>Trouble quickfix<cr>", "Quick Fix"},
+    u = { "<cmd>Trouble lsp_references<cr>", "Usage"},
+    g = { "<cmd>Gitsigns setloclist<cr>", "Open changed hunk" },
+  },
+
+
 
   g = {
     name = "Git",
@@ -166,6 +177,21 @@ local mappings = {
       "Diff",
     },
   },
+
+  R = {
+    name = "Replace",
+    f = { "<cmd>lua require('spectre').open_file_search()<CR>", "Replace File" },
+    p = { "<cmd>lua require('spectre').open()<CR>", "Replace Project" },
+    s = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", "Search" },
+    -- -- 全项目替换
+    -- vim.keybinds.gmap("n", "<leader>rp", "", vim.keybinds.opts)
+    -- -- 只替换当前文件
+    -- vim.keybinds.gmap("n", "<leader>rf", , vim.keybinds.opts)
+    -- -- 全项目中搜索当前单词
+    -- vim.keybinds.gmap("n", "<leader>rw", , vim.keybinds.opts)
+  },
+
+
 
   l = {
     name = "LSP",
@@ -209,6 +235,19 @@ local mappings = {
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
   },
+
+  H = {
+    name = "Help",
+    -- b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+    c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
+    h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
+    M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
+    -- r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
+    R = { "<cmd>Telescope registers<cr>", "Registers" },
+    k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
+    C = { "<cmd>Telescope commands<cr>", "Commands" },
+  },
+
 
   t = {
     name = "Terminal",
