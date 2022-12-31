@@ -1,4 +1,4 @@
-local status_ok, lastplace = pcall(require, "lastplace")
+local status_ok, lastplace = pcall(require, "nvim-lastplace")
 if not status_ok then
   vim.notify("lastplace not found")
   return
