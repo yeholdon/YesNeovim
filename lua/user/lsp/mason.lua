@@ -8,6 +8,7 @@ local servers = {
 	"jsonls",
 	-- "yamlls",
     "clangd",
+    "stylua",
 }
 
 local settings = {
