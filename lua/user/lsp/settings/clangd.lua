@@ -17,6 +17,5 @@ return {
 		"--header-insertion-decorators",
 		"-j=12",
 		"--pretty",
-        '-style="{ IndentWidth = 4, TabWidth = 4 }"',
   }
 }

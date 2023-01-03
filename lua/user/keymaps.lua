@@ -29,10 +29,10 @@ keymap("n", "<leader>o", "<cmd>AerialOpen<cr>", opts)
 keymap("n", "<A-o>", "<cmd>ClangdSwitchSourceHeader<cr>", opts)
 keymap("n", "<leader>u", "<cmd>Trouble lsp_references<cr>", opts)
 -- Resize with arrows
-keymap("n", "<C-S-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-S-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-S-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-S-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", "<C-A-Up>", ":resize -2<CR>", opts)
+keymap("n", "<C-A-Down>", ":resize +2<CR>", opts)
+keymap("n", "<C-A-Left>", ":vertical resize -2<CR>", opts)
+keymap("n", "<C-A-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
@@ -41,6 +41,31 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+
+-- calltree
+keymap("n", "<leader>in", "<cmd>lua vim.lsp.buf.incoming_calls()<cr>", opts)
+
+-- exit whole program
+keymap("n", "ZZ", ":lua require('user.utils').SaveAndExit()<cr>", opts)
+
+-- debug
+keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint(); require'user.dap.dap-util'.store_breakpoints(true)<cr>", opts)
+keymap("n", "<leader>dB", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input '[Condition] > ')<cr>", opts)
+-- keymap("n", "<leader>dr", "lua require'dap'.repl.open()<cr>", opts)
+keymap("n", "<F9>", "<cmd>lua require'dap'.run_last()<cr>", opts)
+keymap('n', '<F10>', '<cmd>lua require"user.dap.dap-util".reload_continue()<CR>', opts)
+keymap("n", "<F4>", "<cmd>lua require'dap'.terminate()<cr>", opts)
+keymap("n", "<F5>", "<cmd>lua require'dap'.continue()<cr>", opts)
+keymap("n", "<F6>", "<cmd>lua require'dap'.step_over()<cr>", opts)
+keymap("n", "<F7>", "<cmd>lua require'dap'.step_into()<cr>", opts)
+keymap("n", "<F8>", "<cmd>lua require'dap'.step_out()<cr>", opts)
+keymap("n", "K", "<cmd>lua require'dapui'.eval()<cr>", opts)
+-- keymap("n", "<leader>dt", "<cmd>lua require'dapui'.toggle()<cr>", opts)
+-- keymap("n", "<leader>dx", "<cmd>lua require'dap'.terminate()<cr>", opts)
+
+-- git diff view
+keymap('n', '<leader>j', ']c', opts)
+keymap('n', '<leader>k', '[c', opts)
 
 -- Insert --
 -- Press jk fast to exit insert mode 
