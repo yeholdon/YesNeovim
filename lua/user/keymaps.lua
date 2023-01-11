@@ -29,10 +29,10 @@ keymap("n", "<leader>o", "<cmd>AerialOpen<cr>", opts)
 keymap("n", "<A-o>", "<cmd>ClangdSwitchSourceHeader<cr>", opts)
 keymap("n", "<leader>u", "<cmd>Trouble lsp_references<cr>", opts)
 -- Resize with arrows
-keymap("n", "<C-A-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-A-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-A-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-A-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", "<C-S-Up>", ":resize -2<CR>", opts)
+keymap("n", "<C-S-Down>", ":resize +2<CR>", opts)
+keymap("n", "<C-S-Left>", ":vertical resize -2<CR>", opts)
+keymap("n", "<C-S-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
